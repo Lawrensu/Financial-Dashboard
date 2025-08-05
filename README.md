@@ -11,6 +11,7 @@ A modern dashboard application built with Next.js App Router as part of my full-
 - **React Components**: Created reusable components like `AcmeLogo` and responsive layouts
 - **TypeScript Integration**: Full TypeScript setup for type safety and better development experience
 - **Client Components**: Understanding `'use client'` directive for interactive components
+- **Server Components**: Building async server components for data fetching
 
 ### 🎯 **Styling & Design**
 - **Tailwind CSS**: Responsive design with utility-first CSS framework
@@ -25,19 +26,31 @@ A modern dashboard application built with Next.js App Router as part of my full-
 - **Icon Integration**: Heroicons for consistent UI iconography
 - **Route Management**: File-based routing with dashboard subdirectories
 
+### 📊 **Data Management & Fetching**
+- **Server-Side Data Fetching**: Implementing async functions for database queries
+- **TypeScript Interfaces**: Defining data models with proper type safety
+- **Data Display Components**: Building dynamic components that render fetched data
+- **Async/Await Patterns**: Understanding server component data fetching
+
 ### 🏗️ **Project Structure & Architecture**
 ```
 app/
 ├── layout.tsx          # Root layout with global styles
 ├── page.tsx           # Landing page component
 ├── dashboard/         # Dashboard section (file-based routing)
+│   └── page.tsx       # Dashboard main page with async data fetching
 ├── ui/                # Reusable UI components
 │   ├── fonts.ts       # Font configurations
 │   ├── global.css     # Global styles
 │   ├── acme-logo.tsx  # Logo component
 │   └── dashboard/     # Dashboard-specific components
-│       └── nav-links.tsx  # Navigation component
+│       ├── nav-links.tsx      # Navigation component
+│       ├── cards.tsx          # Dashboard cards component
+│       ├── revenue-chart.tsx  # Revenue visualization
+│       └── latest-invoices.tsx # Latest invoices display
 ├── lib/               # Utility functions
+│   ├── data.ts        # Database query functions
+│   ├── definitions.ts # TypeScript type definitions
 │   └── placeholder-data.ts  # Mock data for development
 ├── query/             # Database queries
 └── seed/              # Database seeding
@@ -68,18 +81,33 @@ app/
 - Icon-based navigation with Heroicons
 - Conditional styling with `clsx` utility
 
+✅ **Dashboard Components**
+- **Latest Invoices**: Dynamic list with customer data and amounts
+- **Revenue Chart**: Data visualization component (ready for integration)
+- **Dashboard Cards**: Metric display components (scaffolded)
+- **Async Data Fetching**: Server-side data loading with proper TypeScript types
+
+✅ **Data Integration**
+- Server component data fetching with `fetchRevenue()` and `fetchLatestInvoices()`
+- TypeScript interfaces for data models (`LatestInvoice`, etc.)
+- Responsive data display with conditional rendering
+- Image optimization for customer profile pictures
+
 ✅ **Performance Optimization**
 - Next.js Image optimization
 - Font optimization with `next/font`
 - CSS-in-JS with Tailwind utilities
 - Client-side routing for smooth navigation
+- Server-side rendering for better SEO
 
 ## 🚧 **Next Steps in My Learning Journey**
 
-- [ ] Database integration and data fetching
+- [ ] Complete dashboard cards implementation
+- [ ] Database integration and real data connection
 - [ ] User authentication and authorization
-- [ ] Dashboard functionality with charts and metrics
+- [ ] Chart/visualization implementation for revenue data
 - [ ] API routes and server-side logic
+- [ ] Error handling and loading states
 - [ ] Deployment and production optimization
 
 ## 🛠️ **Tech Stack**
@@ -91,6 +119,7 @@ app/
 - **Fonts**: Google Fonts (Inter, Lusitana)
 - **Package Manager**: pnpm
 - **State Management**: React Hooks
+- **Data Fetching**: Server Components with async/await
 
 ## 🚀 **Getting Started**
 
@@ -130,6 +159,9 @@ This project follows the [Next.js Learn Course](https://nextjs.org/learn) curric
 - **Client vs Server Components**: Understanding when to use `'use client'` directive
 - **React Hooks**: Implementing `usePathname()` for route-aware components
 - **Responsive Design**: Creating mobile-first components that adapt to screen sizes
+- **Async Server Components**: Fetching data on the server before component rendering
+- **TypeScript Integration**: Proper typing for props, data models, and component interfaces
+- **Data Flow**: Understanding how data flows from server functions to UI components
 
 ---
 
